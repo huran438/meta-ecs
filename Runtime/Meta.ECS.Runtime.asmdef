@@ -1,0 +1,19 @@
+{
+    "name": "Meta.ECS.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Leopotam.Ecs",
+        "adic.runtime",
+        "Leopotam.Globals",
+        "Meta.Core.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
