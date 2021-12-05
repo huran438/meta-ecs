@@ -30,11 +30,11 @@ namespace Meta.ECS.Runtime
 #endif
 
         [Inject]
-        protected void Init()
+        protected void Init(IWorldsService worldsService)
         {
             var _transform = transform;
 
-            _entity = Service<IWorldsService>.Get().DefaultWorld.NewEntity();
+            _entity = worldsService.World.NewEntity();
 
             _entity.Replace(new GameObjectRef
             {

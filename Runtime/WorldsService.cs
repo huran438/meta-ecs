@@ -11,12 +11,17 @@ namespace Meta.ECS.Runtime
 
         public WorldsService()
         {
-            DefaultWorld = new EcsWorld();
-            _ecsWorlds[Guid.Empty] = DefaultWorld;
+            World = new EcsWorld();
+            _ecsWorlds[Guid.Empty] = World;
             _ecsWorldsStates[Guid.Empty] = true;
         }
 
-        public EcsWorld DefaultWorld { get; }
+        public EcsWorld World { get; private set; }
+        public void HotReload()
+        {
+            World.Destroy();
+            World = new EcsWorld();
+        }
 
         public EcsWorld GetWorld(Guid guid)
         {
